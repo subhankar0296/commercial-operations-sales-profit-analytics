@@ -53,11 +53,11 @@ The project follows a Star Schema model consisting of:
 
 ### Fact Table
 
-* **`dbo.Fact`**: Tracks core quantitative metrics including `Sales`, `COGS`, `Total_Expenses`, `Profit`, `Marketing`, `Inventory`, and `Date`[cite: 1].
+* **`dbo.Fact`**: Tracks core quantitative metrics including `Sales`, `COGS`, `Total_Expenses`, `Profit`, `Marketing`, `Inventory`, and `Date`.
 
 ### Dimension Tables
-* **`dbo.Product`**: Contains item attributes including `ProductID`, `Product`, `Product_Type`, and operational segment `Type`[cite: 1].
-* **`dbo.Location`**: Houses geographical attributes including `Area_Code` and `State`[cite: 1].
+* **`dbo.Product`**: Contains item attributes including `ProductID`, `Product`, `Product_Type`, and operational segment `Type`.
+* **`dbo.Location`**: Houses geographical attributes including `Area_Code` and `State`.
 
 ---
 
