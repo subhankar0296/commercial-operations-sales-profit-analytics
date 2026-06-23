@@ -142,7 +142,7 @@ The Power BI Executive Dashboard provides a comprehensive view of business perfo
 
 ## Dashboard Preview
 
-![Commercial Operations Dashboard](dashboard_preview.png)
+<img width="850" height="474" alt="image" src="https://github.com/user-attachments/assets/7b235f60-40a8-4914-a2b7-3031b8ac7472" />
 
 ---
 
