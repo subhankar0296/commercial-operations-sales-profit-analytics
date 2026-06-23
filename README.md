@@ -144,8 +144,9 @@ The Power BI Executive Dashboard provides a comprehensive view of business perfo
 ```text
 ├── Data/
 │   └── Fact.csv
-    └── Location.csv
-    └── Product.csv
+│    └── Location.csv
+│    └── Product.csv
+│
 ├── SQL/
 │   └── commercial-operations-sales-profit-analytics.sql
 │
