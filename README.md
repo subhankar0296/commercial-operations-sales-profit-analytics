@@ -1,56 +1,192 @@
-# Commercial Operations & Profit Margin Optimization Engine
+#Commercial Operations Sales & Profit Analytics Dashboard
 
-## 📋 Project Overview
-This project focuses on translating raw transactional, product, and regional data into strategic business insights for an omni-channel retail operation. By engineering a relational schema across sales performance (`Fact`), product lines (`Product`), and distribution geography (`Location`), this engine isolates revenue leakage, evaluates marketing ROI, and tracks inventory turnover. 
+## Overview
 
-The primary objective is to equip operations leadership and stakeholders with programmable database modules to dynamically analyze **Cost of Goods Sold (COGS)**, **Budget Margins**, and **Net Profitability** across different states[cite: 2].
+This project demonstrates an end-to-end Business Intelligence solution built using SQL Server and Power BI to analyze commercial sales performance, profitability, product contribution, and regional trends.
 
----
-
-## 🛠️ Tech Stack & Key Concepts
-*   **Database Engine:** Microsoft SQL Server
-*   **Advanced SQL Techniques:** Window Functions (`DENSE_RANK`), Hierarchical Aggregations (`ROLLUP`), Explicit Transaction Isolation (`ACID` compliance)[cite: 2]
-*   **Database Programmability:** Stored Procedures, Scalar User-Defined Functions (UDFs), Table-Valued Functions (TVFs)[cite: 2]
-*   **Business Intelligence Core:** Inventory Control, Profitability Modeling, Margin Risk Calculations[cite: 2]
+The objective was to transform raw transactional data into actionable business insights by leveraging SQL for data preparation and analysis, followed by Power BI for data modeling, KPI development, and interactive dashboard creation.
 
 ---
 
-## 📐 Database Schema Architecture
-The project utilizes an optimized relational model consisting of three primary tables[cite: 2]:
-1.  **`Location`:** Relational lookup containing geographic footprints (`Area_Code`, `State`)[cite: 2].
-2.  **`Product`:** Product registry tracking classification metrics (`ProductID`, `Product`, `Product_Type`, `Type`)[cite: 2].
-3.  **`Fact`:** Centralized transactional ledger recording operational metrics (`Sales`, `COGS`, `Profit`, `Inventory`, `Marketing`, `Total_Expenses`, `Date`) linked to dimensions[cite: 2].
+## Business Problem
+
+Businesses need a centralized view of sales and profitability to identify growth opportunities, monitor operational performance, and make data-driven decisions.
+
+This project addresses key business questions:
+
+* Which states generate the highest sales and profit?
+* Which product categories contribute the most to profitability?
+* How are sales and profit margins trending over time?
+* Which markets drive overall business performance?
+* What are the key drivers of profitability?
 
 ---
 
-## 🚀 Key Highlights & Advanced Implementation
+## Tools & Technologies
 
-### 1. Database Automation & Custom Programmability
-To eliminate repetitive manual lookups, the database is embedded with custom programmable abstractions[cite: 2]:
-*   **Scalar Functions:** Built an expansion module (`Increased_sale`) to dynamically forecast potential margins against a hypothetical 5% across-the-board sales increase[cite: 2].
-*   **Table-Valued Functions:** Deployed an inline TVF (`Product_Type`) allowing dynamic, parameterized querying of product catalogs based on stakeholder preference[cite: 2].
-*   **Stored Procedures:** Programmed a reusable stored procedure execution framework (`ProductType`) to isolate inventory categories efficiently[cite: 2].
+### SQL Server
 
-### 2. Analytical Depth & Advanced Query Optimization
-*   **Multi-Level Hierarchical Aggregations:** Leveraged the `ROLLUP` operator to generate complex multi-dimensional aggregates, rolling up transactional data from localized `ProductID` levels to weekly and grand-total layers simultaneously[cite: 2].
-*   **Window Functions for Ranking:** Used `DENSE_RANK() OVER` partitioned logic to run dense sales-wise ranking profiles without gaps, removing statistical skew during performance benchmarking[cite: 2].
-*   **Conditional Risk Frameworks:** Embedded logical evaluation trees (`CASE WHEN`) to instantly categorize product performance into a customized binary classification structure (`Profit` vs. `Loss` thresholds based on expense overheads)[cite: 2].
+* Data Exploration
+* Data Cleaning
+* Joins
+* Aggregations
+* Window Functions
+* Stored Procedures
+* User Defined Functions (UDFs)
+* Table-Valued Functions (TVFs)
+* Transaction Control
 
-### 3. Data Integrity & Transaction Controls
-*   Showcases standard enterprise risk management by enclosing structural updates within `BEGIN TRAN` block structures[cite: 2]. This guarantees data consistency by using safe `ROLLBACK` safety nets to preserve state history during volatile database modifications[cite: 2].
+### Power BI
 
----
-
-## 📊 Strategic Business Questions Answered
-The analytical script provides explicit answers to critical operational metrics, including[cite: 2]:
-*   Total marketing spend efficiency isolated by individual high-priority product keys[cite: 2].
-*   State-by-state profit metrics mapping revenue peaks (e.g., isolating performance in Colorado)[cite: 2].
-*   Average inventory levels grouped by product ID to prevent warehouse bloat and stockout anomalies[cite: 2].
-*   Product margin health reporting tailored to flag product segments dropping below a target 100-unit index[cite: 2].
+* Data Modeling
+* Power Query
+* DAX Measures
+* KPI Development
+* Interactive Dashboards
+* Data Visualization
 
 ---
 
-## 💻 How to Run the Scripts
-1. Open **SQL Server Management Studio (SSMS)** or your preferred T-SQL terminal.
-2. Execute the schema generation and dataset population scripts.
-3. Run the analytical query batches sequentially to evaluate database performance, build the programmatic functions, and observe output metrics[cite: 2].
+## Database Design
+
+The project follows a Star Schema model consisting of:
+
+### Fact Table
+
+**Fact**
+
+* Sales
+* COGS
+* Total Expenses
+* Profit
+* Marketing
+* Inventory
+* Date
+
+### Dimension Tables
+
+**Product**
+
+* Product ID
+* Product Type
+* Product Category
+
+**Location**
+
+* Area Code
+* State
+* Market
+* Market Size
+
+---
+
+## SQL Analysis
+
+Key SQL operations performed include:
+
+* Sales and Profit Analysis
+* Product-wise Performance Evaluation
+* State-wise Revenue Analysis
+* Profitability Calculations
+* Ranking Products using Window Functions
+* Hierarchical Aggregations using ROLLUP
+* Stored Procedure Development
+* Scalar and Table-Valued Functions
+* Transaction Management using BEGIN TRANSACTION, COMMIT, and ROLLBACK
+
+### Advanced SQL Concepts Used
+
+* DENSE_RANK()
+* CASE WHEN
+* GROUP BY ROLLUP
+* Stored Procedures
+* Scalar UDFs
+* Inline Table-Valued Functions
+* Transactions
+
+---
+
+## Power BI Dashboard
+
+The Power BI Executive Dashboard provides a comprehensive view of business performance through:
+
+### Key Performance Indicators
+
+* Total Sales
+* Total COGS
+* Total Expenses
+* Net Profit
+* Net Profit Margin %
+
+### Visualizations
+
+* Regional Sales vs Profit Analysis
+* Sales by Market Distribution
+* Product Profitability Ledger
+* Revenue & Profit Growth Trends
+* Interactive Filters for Date, State, and Product
+
+---
+
+## Key Insights
+
+* Generated **$819.81K** in Total Sales.
+* Achieved **$231.48K** Net Profit.
+* Maintained a **28.24% Profit Margin**.
+* California emerged as the highest-performing state.
+* West and Central markets contributed the largest share of revenue.
+* Coffee delivered the highest profit margin among all product categories.
+* Revenue remained stable while profitability improved over time.
+
+---
+
+## Dashboard Preview
+
+![Commercial Operations Dashboard](dashboard_preview.png)
+
+---
+
+## Project Workflow
+
+1. Data Collection
+2. Data Cleaning & Validation
+3. SQL Data Analysis
+4. Data Modeling
+5. DAX Measure Creation
+6. Dashboard Development
+7. Business Insight Generation
+
+---
+
+## Repository Structure
+
+```text
+├── Data/
+│   └── Fact.csv
+    └── Location.csv
+    └── Product.csv
+├── SQL/
+│   └── commercial-operations-sales-profit-analytics.sql
+│
+├── PowerBI/
+│   └── Commercial Operations Sales & Profit Margin Executive Dashboard.pbix
+│
+├── Images/
+│   └── dashboard_preview.png
+│
+└── README.md
+```
+
+---
+
+## Business Value
+
+This solution enables stakeholders to monitor financial performance, evaluate product profitability, analyze regional trends, and support strategic decision-making through an interactive business intelligence dashboard.
+
+---
+
+## Author
+
+**Subhankar Mondal**
+
+SQL | Power BI | Python | Data Analytics | Business Intelligence
