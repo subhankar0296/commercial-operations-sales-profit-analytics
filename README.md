@@ -109,7 +109,7 @@ The Power BI Executive Dashboard provides a comprehensive view of business perfo
 
 ---
 
-## Key Insights
+## 📈 Key Insights
 
 * Generated **$819.81K** in Total Sales.
 * Achieved **$231.48K** Net Profit.
