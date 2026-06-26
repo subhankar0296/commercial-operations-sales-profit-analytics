@@ -1,6 +1,6 @@
 # Commercial Operations Sales & Profit Analytics Dashboard
 
-## Overview
+## 📌 Project Overview
 
 This project demonstrates an end-to-end Business Intelligence solution built using SQL Server and Power BI to analyze commercial sales performance, profitability, product contribution, and regional trends.
 
@@ -8,7 +8,7 @@ The objective was to transform raw transactional data into actionable business i
 
 ---
 
-## Business Problem
+## 🎯 Business Problem
 
 Businesses need a centralized view of sales and profitability to identify growth opportunities, monitor operational performance, and make data-driven decisions.
 
@@ -22,7 +22,7 @@ This project addresses key business questions:
 
 ---
 
-## Tools & Technologies
+## 🛠 Tools & Technologies
 
 ### SQL Server
 
@@ -87,7 +87,7 @@ Key SQL operations performed include:
 
 ---
 
-## Power BI Dashboard
+## 📊 Power BI Dashboard
 
 The Power BI Executive Dashboard provides a comprehensive view of business performance through:
 
@@ -121,7 +121,7 @@ The Power BI Executive Dashboard provides a comprehensive view of business perfo
 
 ---
 
-## Dashboard Preview
+## 📷 Dashboard Preview
 
 <img width="850" height="474" alt="image" src="https://github.com/user-attachments/assets/7b235f60-40a8-4914-a2b7-3031b8ac7472" />
 
@@ -147,21 +147,21 @@ The Power BI Executive Dashboard provides a comprehensive view of business perfo
 │    └── Location.csv
 │    └── Product.csv
 │
-├── SQL/
-│   └── commercial-operations-sales-profit-analytics.sql
+├── Images/
+│   └── dashboard_preview.png
 │
 ├── PowerBI/
 │   └── Commercial Operations Sales & Profit Margin Executive Dashboard.pbix
 │
-├── Images/
-│   └── dashboard_preview.png
+├── SQL/
+│   └── commercial-operations-sales-profit-analytics.sql
 │
 └── README.md
 ```
 
 ---
 
-## Business Value
+## 📈 Business Value
 
 This solution enables stakeholders to monitor financial performance, evaluate product profitability, analyze regional trends, and support strategic decision-making through an interactive business intelligence dashboard.
 
